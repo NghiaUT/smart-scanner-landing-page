@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Scanner · Lecture photos. Within reach.",
+  title: "Smart Study Scanner · Lecture photos. Within reach.",
   description:
     "Capture or import lecture slides and whiteboard photos, organize them by subject, and find them again with searchable text.",
 };

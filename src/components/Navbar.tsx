@@ -5,7 +5,7 @@ export function BrandLogoMark({ compact = false }: { compact?: boolean }) {
     <a href="#" className="flex items-center gap-3 shrink-0">
       <div className="relative shrink-0 size-8">
         <img
-          alt="Smart Scanner logo"
+          alt="Smart Study Scanner logo"
           className="block size-full"
           src="/assets/28af5.svg"
           width={32}
@@ -17,7 +17,7 @@ export function BrandLogoMark({ compact = false }: { compact?: boolean }) {
           compact ? "text-[17px] leading-[24px]" : "text-[20px] leading-[28px]"
         }`}
       >
-        Smart Scanner
+        Smart Study Scanner
       </span>
     </a>
   );

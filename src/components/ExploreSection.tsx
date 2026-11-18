@@ -25,7 +25,7 @@ export function ExploreSection() {
       <div className="relative mx-auto flex max-w-[1200px] flex-col gap-10">
         <div className="flex flex-col items-center gap-3 text-center">
           <h2 className="text-[28px] font-bold leading-[36px] text-white lg:text-[36px] lg:leading-[44px]">
-            Explore Smart Scanner
+            Explore Smart Study Scanner
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#eff6ff]">
             Try the interactive mobile prototype in Figma or explore the full case study and source code.
