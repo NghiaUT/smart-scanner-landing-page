@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --bako-color-brand-primary: #1d4ed8;
+  --bako-color-brand-subtle: #eff6ff;
+  --bako-color-surface-default: #ffffff;
+  --bako-color-surface-subtle: #f1f5f9;
+  --bako-color-surface-tint: #f8fafc;
+  --bako-color-text-primary: #14171c;
+  --bako-color-text-secondary: #5c636e;
+  --bako-color-text-tertiary: #737b87;
+  --bako-color-text-onprimary: #ffffff;
+  --bako-color-border-default: #cbd5e1;
+  --bako-color-border-subtle: #e2e8f0;
+  --bako-space-2: 2px;
+  --bako-space-4: 4px;
+  --bako-space-8: 8px;
+  --bako-space-12: 12px;
+  --bako-space-16: 16px;
+  --bako-radius-8: 8px;
+  --bako-radius-12: 12px;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--bako-color-surface-default);
+  color: var(--bako-color-text-primary);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}

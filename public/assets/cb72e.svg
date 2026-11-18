@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="4.60465" height="2.76279" viewBox="0 0 4.60465 2.76279" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Camera lens">
+<path d="M0 1.3814C0 0.618472 0.618472 0 1.38139 0H3.22326C3.98618 0 4.60465 0.618472 4.60465 1.3814V1.3814C4.60465 2.14432 3.98618 2.76279 3.22326 2.76279H1.3814C0.618472 2.76279 0 2.14432 0 1.3814V1.3814Z" fill="#1D4ED8"/>
+<circle id="Status dot" cx="2.30233" cy="1.3814" r="1.3814" fill="#1D4ED8"/>
+</g>
+</svg>
