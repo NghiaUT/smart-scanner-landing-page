@@ -31,31 +31,32 @@ export function DesignHighlightsSection() {
   return (
     <section
       id="design"
-      className="w-full bg-[#f5f8ff] px-4 py-10 md:px-10 lg:px-[120px] lg:py-[80px]"
+      className="w-full bg-gradient-to-b from-white via-[#f5f8ff] via-20% to-[#eff6ff] px-4 py-14 md:px-10 lg:px-[120px] lg:py-[96px]"
     >
       <div className="mx-auto flex max-w-[1200px] flex-col gap-10">
         <div className="flex flex-col items-start gap-3 lg:items-center lg:text-center">
-          <span className="inline-flex items-center rounded-full bg-[#dbeafe] px-3 py-1.5 text-[12px] font-semibold leading-[16px] text-[#1e40af]">
-            DESIGN HIGHLIGHTS
-          </span>
+          <div className="flex items-center gap-2 text-[12px] font-semibold tracking-[0.12em] text-[#1d4ed8] uppercase">
+            <span className="h-[2px] w-4 bg-[#1d4ed8]" />
+            <span>Design Highlights</span>
+          </div>
           <h2 className="text-[28px] font-bold leading-[36px] text-[#0f172a] lg:text-[36px] lg:leading-[44px]">
             Built with clarity, speed, and study ergonomics in mind
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3.5 sm:gap-5 md:grid-cols-2">
           {HIGHLIGHTS.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 rounded-2xl border border-[#dce6f7] bg-white p-6 shadow-[0px_8px_24px_0px_rgba(15,23,42,0.05)]"
+              className="flex flex-col gap-2.5 rounded-2xl border border-[#dce6f7] bg-white p-4 shadow-[0px_8px_24px_0px_rgba(15,23,42,0.05)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#bfdbfe] hover:shadow-[0px_18px_36px_0px_rgba(29,78,216,0.12)] sm:gap-3 sm:p-6"
             >
-              <span className="inline-flex w-fit items-center rounded-full bg-[#eff6ff] px-2.5 py-1 text-[11px] font-bold leading-[16px] text-[#1d4ed8]">
+              <span className="text-[11px] font-bold tracking-[0.1em] text-[#1d4ed8] uppercase">
                 {item.tag}
               </span>
-              <h3 className="text-[20px] font-bold leading-[28px] text-[#0f172a]">
+              <h3 className="text-[17px] font-bold leading-[24px] text-[#0f172a] sm:text-[20px] sm:leading-[28px]">
                 {item.title}
               </h3>
-              <p className="text-[14px] font-normal leading-[22px] text-[#475569]">
+              <p className="text-[13px] font-normal leading-[20px] text-[#475569] sm:text-[14px] sm:leading-[22px]">
                 {item.description}
               </p>
             </div>

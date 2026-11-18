@@ -9,9 +9,10 @@ export function HeroSection() {
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-8 lg:flex-row lg:gap-12">
         {/* Hero Copy */}
         <div className="flex w-full flex-col items-start gap-5 lg:w-[520px] lg:shrink-0 lg:gap-6">
-          <span className="inline-flex items-center rounded-full border border-[#bfdbfe] bg-[#dbeafe] px-3 py-1.5 text-[11px] font-semibold leading-[16px] text-[#1e40af] lg:text-[12px]">
-            MOBILE APP · UNIVERSITY STUDY WORKFLOW
-          </span>
+          <div className="flex items-center gap-2 text-[12px] font-semibold tracking-[0.12em] text-[#1d4ed8] uppercase">
+            <span className="h-[2px] w-4 bg-[#1d4ed8]" />
+            <span>Mobile OCR Scanner</span>
+          </div>
 
           <h1 className="text-[36px] font-bold leading-[42px] text-[#0f172a] lg:text-[52px] lg:leading-[60px]">
             Lecture photos.

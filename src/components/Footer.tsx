@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-4 px-4 py-8 md:flex-row md:items-center md:px-10 lg:px-[120px]">
         <BrandLogoMark />
         <p className="text-[14px] font-normal leading-[22px] text-[#5c636e]">
-          Team BaKoTuDu · CO3043 Mobile Application Development
+          © 2026 Smart Scanner · BaKoTuDu
         </p>
       </div>
     </footer>

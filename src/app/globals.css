@@ -30,3 +30,56 @@ body {
   color: var(--bako-color-text-primary);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
+
+@keyframes ui-showcase-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ui-showcase-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: ui-showcase-marquee 28s linear infinite;
+}
+
+.ui-showcase-track:hover,
+.ui-showcase-track:focus-within {
+  animation-play-state: paused;
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes problem-zoom-out-in {
+      entry 0% {
+        transform: translate3d(-24px, 28px, 0) scale(1.26);
+        opacity: 0.25;
+        filter: blur(6px);
+        animation-timing-function: ease-in-out;
+      }
+      entry 100%,
+      exit 0% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+        filter: blur(0px);
+        animation-timing-function: ease-in-out;
+      }
+      exit 100% {
+        transform: translate3d(24px, -28px, 0) scale(1.26);
+        opacity: 0.25;
+        filter: blur(6px);
+      }
+    }
+
+    .problem-scroll-card {
+      transform-origin: center center;
+      will-change: transform, opacity, filter;
+      animation: problem-zoom-out-in auto ease-in-out both;
+      animation-timeline: view(block);
+    }
+  }
+}
