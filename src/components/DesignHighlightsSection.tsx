@@ -2,28 +2,28 @@ import React from "react";
 
 const HIGHLIGHTS = [
   {
-    title: "Token-Driven Design System",
+    title: "Unified Shell & Floating Actions",
     description:
-      "Consistent color, spacing, radius, and typography tokens shared across every mobile screen.",
-    tag: "DESIGN TOKENS",
+      "Standardized headers, bottom navigation, 48px touch targets, and consistent floating + Document and + Subject buttons across Library and Subject views.",
+    tag: "UNIFIED NAVIGATION",
   },
   {
-    title: "Accessible Contrast & Type",
+    title: "Immediate, Non-Blocking OCR",
     description:
-      "High-contrast slate text on clean white surfaces with clear visual hierarchy for quick scanning.",
-    tag: "WCAG AA",
+      "OCR runs in parallel right after capture or import with Processing, Completed, Failed, and Retry states—never blocking Save or re-running on title edits.",
+    tag: "PARALLEL OCR",
   },
   {
-    title: "On-Device OCR Workflow",
+    title: "Date Grid, Compact Lists & Batch Flow",
     description:
-      "Recognized text sits directly below each lecture photo so you can search, read, and copy without switching apps.",
-    tag: "OCR READY",
+      "Date-grouped Library photo grid, compact document items with ⋮ Edit/Delete confirmations, and multi-photo Batch Import with (1), (2), (3) naming.",
+    tag: "SCALABLE UX",
   },
   {
-    title: "Responsive Mobile & Web",
+    title: "Token-Driven System & Precision Filters",
     description:
-      "Crafted for 390px mobile screens and 1440px desktop viewports with unified component patterns.",
-    tag: "RESPONSIVE",
+      "Consistent typography, spacing, and radius tokens across multi-subject filter chips, From/To date ranges, structured empty states, and synced Figma flows.",
+    tag: "DESIGN SYSTEM",
   },
 ];
 
@@ -40,7 +40,7 @@ export function DesignHighlightsSection() {
             <span>Design Highlights</span>
           </div>
           <h2 className="text-[28px] font-bold leading-[36px] text-[#0f172a] lg:text-[36px] lg:leading-[44px]">
-            Built with clarity, speed, and study ergonomics in mind
+            Built with clarity, visual consistency, and study ergonomics
           </h2>
         </div>
 

@@ -115,6 +115,7 @@ export function ProblemSection() {
                 <img
                   alt={card.title}
                   src={card.svg}
+                  loading="lazy"
                   className={`scale-[0.78] object-contain sm:scale-100 ${card.imgClass}`}
                 />
               </div>
