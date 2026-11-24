@@ -4,81 +4,83 @@ import React, { useEffect, useRef, useState } from "react";
 
 const FEATURE_BLOCKS = [
   {
-    eyebrow: "01 · Capture",
-    title: "Capture in class or import from your gallery",
+    eyebrow: "01 · Capture & Batch Import",
+    title: "Snap single boards or batch-import from Gallery",
     description:
-      "Snap whiteboards and slides directly with guided lighting cues, or bring in existing photos from your gallery without changing how you take notes.",
+      "Keep Camera Capture focused on one crisp shot at a time in class, or select two or more gallery photos to batch-import with a shared Subject and auto-numbered titles.",
     bullets: [
-      "• In-app camera with framing guide",
-      "• Single or multi-photo gallery import",
-      "• Crop and rotate during review",
+      "• Single-shot Camera Capture with lighting cue & crop review",
+      "• Ordered multi-photo Batch Gallery Import with preview & deselect",
+      "• Shared title auto-numbered (1), (2), (3) into independent documents",
     ],
     reverse: false,
     screens: [
       {
         label: "S03 · Camera Capture",
-        image: "/assets/716de.png",
-        caption: "Keep the page inside the guide",
+        image: "/assets/screens/s03-camera-capture.png",
+        caption: "Single-shot classroom framing",
       },
       {
-        label: "S04 · Crop & Adjust",
-        image: "/assets/f4d6a.png",
-        caption: "Adjust edges and orientation",
+        label: "S02B · Batch Import",
+        image: "/assets/screens/s02b-batch-import.png",
+        caption: "Shared subject & (1), (2), (3) titles",
       },
     ],
   },
   {
-    eyebrow: "02 · Organize",
-    title: "Group every note by subject and lecture",
+    eyebrow: "02 · Organize & Parallel OCR",
+    title: "File by subject while OCR runs immediately in parallel",
     description:
-      "Tag captured photos with a course name and custom note title right after saving so your study library stays structured all semester.",
+      "Text recognition starts right after capture or import—never gating Save. Use suggested titles, sort subjects by name or creation date, and manage everything via ⋮ menus.",
     bullets: [
-      "• Subject folders with note counts",
-      "• Editable titles and lecture dates",
-      "• Fast filter by course or recent saves",
+      "• Non-blocking OCR with Processing, Completed, Failed & Retry states",
+      "• Subject sorting (A–Z, Newest/Oldest) & ⋮ Edit/Delete confirmation",
+      "• Compact document items, Clear/Suggested titles & floating + buttons",
     ],
     reverse: true,
     screens: [
       {
-        label: "S06 · Subject Folders",
-        image: "/assets/71697.png",
-        caption: "EE101 · CS302 · BIO204",
+        label: "S05 · Save Document",
+        image: "/assets/screens/s05-save-document.png",
+        caption: "Save anytime while OCR reads text",
       },
       {
-        label: "S05 · Save Details",
-        image: "/assets/a3e11.png",
-        caption: "Assign subject and lecture title",
+        label: "S06 · Subjects",
+        image: "/assets/screens/s06-subjects.png",
+        caption: "Name/Date sort, ⋮ menu & + Subject FAB",
       },
     ],
   },
   {
-    eyebrow: "03 · Search",
-    title: "Find any slide by recognized text",
+    eyebrow: "03 · Search & Precision Filters",
+    title: "Search titles and OCR text with Subject & Date filters",
     description:
-      "On-device OCR indexes keywords inside your whiteboard and slide photos so you can jump straight to the right page before exams.",
+      "Search directly across Document Titles and recognized photo text, narrow results with searchable multi-subject filter chips or From/To date ranges, and review compact matches.",
     bullets: [
-      "• Instant keyword search across notes",
-      "• Highlighted OCR text preview",
-      "• Copy recognized text with one tap",
+      "• Simultaneous Document Title & OCR text search with highlights",
+      "• Multi-Subject filter chips & From/To Date Range selector",
+      "• Scoped Search in Subject & compact Document List Items",
     ],
     reverse: false,
     screens: [
       {
-        label: "S07 · Search Results",
-        image: "/assets/338cc.png",
-        caption: "Search inside lecture photos",
+        label: "S08 · Global Search",
+        image: "/assets/screens/s08-global-search.png",
+        caption: "Unified search & Subject/Date filters",
       },
       {
-        label: "S09 · OCR Preview",
-        image: "/assets/3555b.png",
-        caption: "Read and copy extracted text",
+        label: "S07 · Subject Documents",
+        image: "/assets/screens/s07-subject-documents.png",
+        caption: "Scoped search & compact document list",
       },
     ],
   },
 ];
 
 export function SolutionSection() {
-  const [visibleIndices, setVisibleIndices] = useState<Record<number, boolean>>({});
+  const [visibleIndices, setVisibleIndices] = useState<Record<number, boolean>>(
+    {}
+  );
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -116,7 +118,7 @@ export function SolutionSection() {
             <span>Our Solution</span>
           </div>
           <h2 className="text-[28px] font-bold leading-[36px] text-[#14171c] lg:text-[36px] lg:leading-[44px]">
-            Three focused steps from classroom photo to searchable note
+            Three focused workflows from classroom photo to searchable note
           </h2>
         </div>
 
@@ -159,7 +161,7 @@ export function SolutionSection() {
 
                 {/* Screens */}
                 <div
-                  className="relative flex w-full flex-1 items-center justify-center gap-3 overflow-hidden rounded-2xl border border-[#bfdbfe] p-3 sm:gap-4 sm:p-4 lg:gap-5 lg:p-6"
+                  className="relative flex w-full flex-1 items-start justify-center gap-3 overflow-hidden rounded-2xl border border-[#bfdbfe] p-3.5 sm:gap-5 sm:p-5 lg:gap-6 lg:p-6"
                   style={{
                     backgroundImage:
                       "linear-gradient(140.6deg, rgb(239, 246, 255) 0%, rgb(224, 234, 255) 100%)",
@@ -168,28 +170,27 @@ export function SolutionSection() {
                   {block.screens.map((scr) => (
                     <div
                       key={scr.label}
-                      className="w-[132px] shrink-0 rounded-[16px] bg-[#0e1014] p-1.5 shadow-md sm:w-[190px] sm:rounded-[18px] sm:p-2 lg:w-[210px]"
+                      className="flex w-[47%] max-w-[152px] shrink-0 flex-col items-center gap-2 sm:w-[194px] sm:max-w-none lg:w-[212px]"
                     >
-                      <div className="flex h-[210px] w-full flex-col overflow-hidden rounded-[11px] bg-white sm:h-[320px] sm:rounded-[12px] lg:h-[360px]">
-                        <div className="flex h-4 items-center justify-between bg-[#0e1014] px-2.5 text-[6px] font-semibold text-white">
-                          <span>09:41</span>
-                          <span className="text-[#cbd5e1]">OCR ON</span>
-                        </div>
-                        <div className="border-b border-[#e2e8f0] px-2.5 py-1.5">
-                          <p className="truncate text-[9px] font-bold text-[#14171c]">
-                            {scr.label}
-                          </p>
-                          <p className="truncate text-[6px] text-[#5c636e]">
-                            {scr.caption}
-                          </p>
-                        </div>
-                        <div className="flex-1 p-2">
+                      <div className="w-full rounded-[18px] bg-[#0e1014] p-1.5 shadow-[0px_14px_30px_rgba(15,23,42,0.18)] sm:rounded-[22px] sm:p-2">
+                        <div className="overflow-hidden rounded-[13px] bg-white sm:rounded-[16px]">
                           <img
-                            alt={scr.label}
+                            alt={`${scr.label} — ${scr.caption}`}
                             src={scr.image}
-                            className="h-full w-full rounded-md object-cover"
+                            width={430}
+                            height={820}
+                            loading="lazy"
+                            className="block aspect-[430/820] h-auto w-full object-cover"
                           />
                         </div>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-[11px] font-bold leading-[16px] text-[#0f172a] sm:text-[12px]">
+                          {scr.label}
+                        </p>
+                        <p className="text-[10px] leading-[14px] text-[#475569] sm:text-[11px]">
+                          {scr.caption}
+                        </p>
                       </div>
                     </div>
                   ))}

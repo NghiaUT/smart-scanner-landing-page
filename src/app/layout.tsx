@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Smart Study Scanner · Lecture photos. Within reach.",
   description:
-    "Capture or import lecture slides and whiteboard photos, organize them by subject, and find them again with searchable text.",
+    "Capture classroom boards or batch-import lecture photos, organize notes by subject with parallel OCR, and search instantly by title, text, or date.",
 };
 
 export default function RootLayout({

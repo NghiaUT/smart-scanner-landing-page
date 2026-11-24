@@ -1,9 +1,5 @@
 import React from "react";
-
-const FIGMA_PROTOTYPE_URL =
-  "https://www.figma.com/design/aD9g8VpG8jGVa3bfIyTlsV/bakotudu-smart-study-scanner?node-id=219-6926&p=f&t=ztCPtjqB5t6X7NQl-0";
-const BEHANCE_CASE_STUDY_URL =
-  "https://www.behance.net/gallery/258626553/Smart-Scanner";
+import { BEHANCE_CASE_STUDY_URL, FIGMA_PROTOTYPE_URL } from "@/lib/links";
 
 export function ExploreSection() {
   return (
@@ -16,10 +12,20 @@ export function ExploreSection() {
       }}
     >
       <div className="pointer-events-none absolute -left-[120px] -top-[140px] size-[440px] opacity-80">
-        <img alt="" className="block size-full" src="/assets/6e155.svg" />
+        <img
+          alt=""
+          className="block size-full"
+          src="/assets/6e155.svg"
+          loading="lazy"
+        />
       </div>
       <div className="pointer-events-none absolute -bottom-[140px] right-[-100px] size-[380px] opacity-80">
-        <img alt="" className="block size-full" src="/assets/6feb6.svg" />
+        <img
+          alt=""
+          className="block size-full"
+          src="/assets/6feb6.svg"
+          loading="lazy"
+        />
       </div>
 
       <div className="relative mx-auto flex max-w-[1200px] flex-col gap-10">
@@ -28,20 +34,29 @@ export function ExploreSection() {
             Explore Smart Study Scanner
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#eff6ff]">
-            Try the interactive mobile prototype in Figma or explore the full case study and source code.
+            Try the synced mobile prototype in Figma or explore the full UI/UX
+            case study and source code.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
           <div className="flex flex-col gap-3 rounded-2xl border border-[#dbeafe]/50 bg-white p-4 shadow-[0px_12px_32px_0px_rgba(11,19,43,0.18)] sm:gap-4 sm:p-6">
             <div className="relative shrink-0 size-6">
-              <img alt="" className="block size-full" src="/assets/3bd3d.svg" width={24} height={24} />
+              <img
+                alt=""
+                className="block size-full"
+                src="/assets/3bd3d.svg"
+                width={24}
+                height={24}
+                loading="lazy"
+              />
             </div>
             <h3 className="text-[18px] font-bold leading-[24px] text-[#14171c] sm:text-[20px] sm:leading-[28px]">
               Interactive Prototype
             </h3>
             <p className="flex-1 text-[13px] font-normal leading-[20px] text-[#5c636e] sm:text-[14px] sm:leading-[22px]">
-              Open the full mobile flow and design system directly in Figma.
+              Open the updated official mobile flows, batch import, and design
+              system directly in Figma.
             </p>
             <a
               href={FIGMA_PROTOTYPE_URL}
@@ -55,7 +70,14 @@ export function ExploreSection() {
 
           <div className="flex flex-col gap-3 rounded-2xl border border-[#dbeafe]/50 bg-white p-4 shadow-[0px_12px_32px_0px_rgba(11,19,43,0.18)] sm:gap-4 sm:p-6">
             <div className="relative shrink-0 size-6">
-              <img alt="" className="block size-full" src="/assets/5be3f.svg" width={24} height={24} />
+              <img
+                alt=""
+                className="block size-full"
+                src="/assets/5be3f.svg"
+                width={24}
+                height={24}
+                loading="lazy"
+              />
             </div>
             <h3 className="text-[18px] font-bold leading-[24px] text-[#14171c] sm:text-[20px] sm:leading-[28px]">
               UI/UX Case Study
@@ -75,7 +97,14 @@ export function ExploreSection() {
 
           <div className="flex flex-col gap-3 rounded-2xl border border-[#dbeafe]/50 bg-white p-4 shadow-[0px_12px_32px_0px_rgba(11,19,43,0.18)] sm:gap-4 sm:p-6">
             <div className="relative shrink-0 size-6">
-              <img alt="" className="block size-full" src="/assets/069ac.svg" width={24} height={24} />
+              <img
+                alt=""
+                className="block size-full"
+                src="/assets/069ac.svg"
+                width={24}
+                height={24}
+                loading="lazy"
+              />
             </div>
             <h3 className="text-[18px] font-bold leading-[24px] text-[#14171c] sm:text-[20px] sm:leading-[28px]">
               Source Code

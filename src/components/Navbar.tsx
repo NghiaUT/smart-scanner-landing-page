@@ -1,9 +1,10 @@
 import React from "react";
+import { FIGMA_PROTOTYPE_URL } from "@/lib/links";
 
 export function BrandLogoMark({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#" className="flex items-center gap-3 shrink-0">
-      <div className="relative shrink-0 size-8">
+    <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0">
+      <div className="relative shrink-0 size-7 sm:size-8">
         <img
           alt="Smart Study Scanner logo"
           className="block size-full"
@@ -14,7 +15,9 @@ export function BrandLogoMark({ compact = false }: { compact?: boolean }) {
       </div>
       <span
         className={`font-bold text-[#1d4ed8] whitespace-nowrap ${
-          compact ? "text-[17px] leading-[24px]" : "text-[20px] leading-[28px]"
+          compact
+            ? "text-[16px] leading-[22px] sm:text-[17px] sm:leading-[24px]"
+            : "text-[16px] leading-[22px] sm:text-[20px] sm:leading-[28px]"
         }`}
       >
         Smart Study Scanner
@@ -30,9 +33,6 @@ const NAV_LINKS = [
   { label: "Screens", href: "#screens" },
   { label: "Design", href: "#design" },
 ];
-
-const FIGMA_PROTOTYPE_URL =
-  "https://www.figma.com/design/aD9g8VpG8jGVa3bfIyTlsV/bakotudu-smart-study-scanner?node-id=219-6926&p=f&t=ztCPtjqB5t6X7NQl-0";
 
 export function Navbar() {
   return (
@@ -59,7 +59,7 @@ export function Navbar() {
           href={FIGMA_PROTOTYPE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex h-9 lg:h-11 items-center justify-center rounded-lg bg-[#1d4ed8] px-4 text-[14px] font-bold leading-[20px] text-white whitespace-nowrap transition-colors hover:bg-[#1e40af]"
+          className="inline-flex h-9 lg:h-11 items-center justify-center rounded-lg bg-[#1d4ed8] px-3 text-[13px] sm:px-4 sm:text-[14px] font-bold leading-[20px] text-white whitespace-nowrap transition-colors hover:bg-[#1e40af]"
         >
           Try Prototype
         </a>
